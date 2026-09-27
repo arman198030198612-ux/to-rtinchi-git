@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#hero{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.front img , .back img{
+    border-radius: 14px;
+    width: 100%;
+}
+.flip-card{
+    background-color: red;
+    width: 300px;
+}
+.flip-card-inner{
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+
+}
+.flip-card:hover .flip-card-inner{
+    transition: 1s;
+    transform: rotateY(180deg);
+}
+.back , .front{
+    border-radius: 14px;
+    position: absolute;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.front{
+    color: black;
+    background-color: red;
+}
+.back{
+    color: white;
+    background-color: blue;
+    transform: rotateY(180deg);
+}
